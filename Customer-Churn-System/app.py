@@ -19,7 +19,7 @@ with open(os.path.join(BASE_DIR, "assets", "styles.css")) as f:
     )
 
 # Load Model
-model = joblib.load("models/churn_model.pkl")
+model = joblib.load(os.path.join(BASE_DIR, "models", "churn_model.pkl"))
 
 # Hero Section
 st.markdown(
