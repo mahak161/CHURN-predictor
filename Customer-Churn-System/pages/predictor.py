@@ -13,9 +13,14 @@ model_path = os.path.join(BASE_DIR, "models", "churn_model.pkl")
 
 model = joblib.load(model_path)
 
-feature_names = joblib.load(
-    "models/feature_names.pkl"
-)
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+feature_path = os.path.join(BASE_DIR, "models", "feature_names.pkl")
+
+feature_names = joblib.load(feature_path)
 
 print(feature_names)
 
