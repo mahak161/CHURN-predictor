@@ -34,7 +34,13 @@ with open(css_path) as f:
 # -----------------------------
 # LOAD DATA
 # ------------------------
-df = pd.read_csv(r"C:\Users\MAHAK\Downloads\churn.csv")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+file_path = os.path.join(BASE_DIR, "data", "churn.csv")
+
+df = pd.read_csv(file_path)
 
 
 # -----------------------------
