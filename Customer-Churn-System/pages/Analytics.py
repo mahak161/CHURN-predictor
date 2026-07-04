@@ -18,7 +18,14 @@ st.set_page_config(
 # -----------------------------
 # LOAD CSS
 # -----------------------------
-with open("assets/styles.css") as f:
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+css_path = os.path.join(BASE_DIR, "assets", "styles.css")
+
+with open(css_path) as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     st.markdown(
         f"<style>{f.read()}</style>",
         unsafe_allow_html=True
