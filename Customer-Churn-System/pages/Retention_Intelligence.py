@@ -1,3 +1,7 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
